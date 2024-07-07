@@ -29,9 +29,6 @@ http-server
 <pre><code>BASE_URL=http://localhost:8000/api
 </code></pre>
 
-<h3>4. Run the Development Server</h3>
-<p>Start the development server with:</p>
-<pre><code>npm run dev</code></pre>
 
 <h2>Usage</h2>
 <p>Once the server is running, navigate to <a href="http://localhost:3000">http://localhost:3000</a> in your browser.</p>
