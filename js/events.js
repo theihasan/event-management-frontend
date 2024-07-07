@@ -172,3 +172,27 @@ async function deleteEvent(id) {
         alert(error.message);
     }
 }
+
+async function logout() {
+    const token = localStorage.getItem('token');
+    try {
+        const response = await fetch(`${BASE_URL}/logout`, {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            localStorage.removeItem('token');
+            window.location.href = 'login.html';
+        } else {
+            const data = await response.json();
+            alert(data.message);
+        }
+    } catch (error) {
+        alert('An unexpected error occurred.');
+    }
+}
