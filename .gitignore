@@ -1,0 +1,13 @@
+# Node modules
+node_modules/
+
+# Other common files and directories to ignore
+.DS_Store
+.env
+*.log
+*.tmp
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
