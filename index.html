@@ -31,8 +31,8 @@
     </nav>
 
     <!-- Main Content -->
-     <script>
-        if (localStorage.getItem('token')) {
+  
+     
             <div class="container mx-auto p-6">
         <div class="flex justify-between items-center mb-4">
             <h1 class="text-3xl font-semibold">Events</h1>
@@ -59,16 +59,13 @@
             <p id="no-events-message" class="text-center text-gray-600 hidden">No events found</p>
         </div>
 
-        <!-- Pagination -->
+      
         <div id="pagination" class="flex justify-between items-center mt-4">
             <button id="prev-page" class="bg-gray-200 text-gray-600 px-4 py-2 rounded hover:bg-gray-300" disabled>Previous</button>
             <div id="page-info" class="text-gray-600">Page 1</div>
             <button id="next-page" class="bg-gray-200 text-gray-600 px-4 py-2 rounded hover:bg-gray-300">Next</button>
         </div>
     </div>
-        }
-
-     </script>
     <!-- Add Event Modal -->
     <div id="event-modal" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 hidden">
         <div class="bg-white p-6 rounded-lg shadow-lg w-1/3">
