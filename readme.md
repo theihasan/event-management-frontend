@@ -19,7 +19,10 @@
 <h3>2. Install Dependencies</h3>
 <p>Navigate to the project directory and install the necessary dependencies:</p>
 <pre><code>cd event-management-frontend
-npm install</code></pre>
+npm install
+npm install -g http-server
+http-server
+</code></pre>
 
 <h3>3. Set Up Environment Variables</h3>
 <p>Setup API base url in register.js,login.js and events.js</p>
