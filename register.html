@@ -22,7 +22,7 @@
                     required
                 >
             </div>
-
+            <div id="name-error" class="error-message text-red-500 mt-1"></div>
             <div class="mb-4">
                 <label for="email" class="block text-gray-600 text-sm font-medium mb-2">Email</label>
                 <input 
@@ -63,31 +63,10 @@
                 Register
             </button>
         </form>
-
         <!-- Error message container -->
         <div id="error-message" class="mt-4 text-red-500"></div>
     </div>
 
-<script>
-    document.getElementById('registerButton').addEventListener('click', async () => {
-        const form = document.getElementById('registrationForm');
-        const formData = new FormData(form);
-        try {
-            const response = await fetch('http://localhost:8000/api/register', {
-                method: 'POST',
-                body: formData
-            });
-            const data = await response.json();
-            if (response.ok) {
-                localStorage.setItem('token', data.access_token);
-                window.location.href = 'index.html';
-            } else {
-                document.getElementById('error-message').textContent = data.message;
-            }
-        } catch (error) {
-            console.error('Error:', error);
-        }
-    });
-</script>
+<script src="js/register.js"></script>
 </body>
 </html>
